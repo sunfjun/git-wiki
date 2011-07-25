@@ -5,9 +5,9 @@
   %p
     %textarea{:name => 'body', :rows => 30, :style => "width: 100%"}= @page.content
   %p
-    %label 评论信息
+    %label 页面注解
     %input{:name => 'commit_message', :type => :text, :size => '80'}
   %p
-    %input.submit{:type => :submit, :value => "Save as the newest version"}
-    or
+    %input.submit{:type => :submit, :value => "保存一个新的版本"}
+    或者
     %a.cancel{:href=>"/#{@page}"} 取消
