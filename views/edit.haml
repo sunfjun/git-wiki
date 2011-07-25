@@ -1,13 +1,13 @@
-- title "Editing #{@page.name}"
+- title "编辑 #{@page.name}"
 
 %h1= title
 %form{:method => 'POST', :action => "/#{@page}"}
   %p
     %textarea{:name => 'body', :rows => 30, :style => "width: 100%"}= @page.content
   %p
-    %label Commit message
+    %label 评论信息
     %input{:name => 'commit_message', :type => :text, :size => '80'}
   %p
     %input.submit{:type => :submit, :value => "Save as the newest version"}
     or
-    %a.cancel{:href=>"/#{@page}"} cancel
+    %a.cancel{:href=>"/#{@page}"} 取消
